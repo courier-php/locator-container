@@ -1,0 +1,45 @@
+{
+  "name": "courier/locator-container",
+  "description": "Container-based handler/listener instance locator",
+  "keywords": ["container", "psr-11"],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Flavio Heleno",
+      "email": "flaviohbatista@gmail.com",
+      "homepage": "https://flavioheleno.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Courier\\Locators\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Courier\\Test\\": "tests/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true,
+    "preferred-install": "dist",
+    "allow-plugins": {
+      "sandersander/composer-link": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": "^8.2",
+    "courier/contracts": "self.version",
+    "courier/courier": "self.version",
+    "psr/container": "^2.0"
+  },
+  "require-dev": {
+    "php-parallel-lint/php-parallel-lint": "^1.3",
+    "phpstan/phpstan": "^1.10",
+    "sandersander/composer-link": "^0.3.1"
+  }
+}
